@@ -1,0 +1,126 @@
+.header {
+    border: 1px solid lightblue;
+}
+.menu {
+    border: 1px solid lightblue;
+}
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightblue;
+    max-width: 1024px;
+    margin: 0 auto;
+    font-size: 14px;
+    height: 80px;
+}
+.menu-con-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    border: 1px solid lightblue;
+}
+.menu-con-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px solid lightblue;
+}
+.menu-logo {
+    border: 1px solid lightblue;
+    padding: 0 12px;
+    margin-right: 30px;
+    text-decoration: none;
+}
+.menu-gasa {
+    border: 1px solid lightblue;
+    padding: 0 14px;
+    height: 80px;
+    line-height: 80px;
+    text-decoration: none;
+    color: black;
+
+}
+.menu-yisa {
+    border: 1px solid lightblue;
+    padding: 0 14px;
+    height: 80px;
+    line-height: 80px;
+    text-decoration: none;
+    color: black;
+}
+.menu-homeservice {
+    border: 1px solid lightblue;
+    padding: 0 14px;
+    height: 80px;
+    line-height: 80px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-partner {
+    border: 1px solid lightblue;
+    padding: 0 14px;
+    height: 80px;
+    line-height: 80px;
+    text-decoration: none;
+    color: black;
+}
+.menu-client {
+    border: 1px solid lightblue;
+    padding: 0 14px;
+    height: 80px;
+    line-height: 80px;
+    text-decoration: none;
+    color: black;
+}
+.main {
+    border: 1px solid lightblue;
+    align-items: center;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightblue;
+    max-width: 830px;
+    margin: 0 auto;
+}
+.main-head {
+    border: 1px solid lightblue;
+}
+.main-story {
+    border: 1px solid lightblue;
+}
+.main-service {
+    border: 1px solid lightblue;
+}
+.main-client {
+    border: 1px solid lightblue;
+}
+.article {
+    border: 1px solid lightblue;
+}
+.article-review {
+    border: 1px solid lightblue;
+}
+.article-job {
+    border: 1px solid lightblue;
+}
+.footer {
+    border: 1px solid lightblue;
+}
+.footer-logo {
+    border: 1px solid lightblue;
+}
+.footer-blog {
+    border: 1px solid lightblue;
+}
+.footer-terms {
+    border: 1px solid lightblue;
+}
+.footer-pesonaldata {
+    border: 1px solid lightblue;
+}
+.footer-text {
+    border: 1px solid lightblue;
+}
