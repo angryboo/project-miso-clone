@@ -1,50 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko-KR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"> -->
     <link rel="stylesheet" href="./css/main02.css">
     <title>Document</title>
 </head>
 <body>
     <header class="header">
-        <nav class="header__nav">
-            <h1 class="header__heading--title">미소</h1>
-        </nav>
+        <div class="header__nav-flex">            
+            <a href="#" class="header__logo"><h1 class="header__title">미소</h1></a>
+            <nav class="header__nav">
+                <!-- h1 tag를 로고로 사용 -->
+                <ul class="header__nav-list">
+                    <li class="header__nav-list-item"><a href="#">가사도우미</a></li>
+                    <li class="header__nav-list-item"><a href="#">이사</a></li>
+                    <li class="header__nav-list-item"><a href="#">다른 홈 서비스</a>
+                        <ul class="header__nav-sublist">
+                            <li class="header__nav-sublist-item"><a href="#">이사청소</a></li>
+                            <li class="header__nav-sublist-item"><a href="#">침대 가전청소</a></li>
+                            <li class="header__nav-sublist-item"><a href="#">펫시팅</a></li>
+                            <li class="header__nav-sublist-item"><a href="#">더많은 서비스</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-list-item"><a href="#">파트너</a></li>
+                    <li class="header__nav-list-item"><a href="#">고객센터</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <section class="main__reservation">
-            <h2 class="main__reservation--heading">예약하기</h2>
+        <section class="main__booking">
+            <h2 class="main__booking-heading">예약하기</h2>
+            <!-- 숨김처리 필요 -->
+            <p>미소 일상의 변화 모두의 일상이 행복하도록 미소가 함께할게요</p>
+            <button class="main__booking-button">예약하기</button>
         </section>
-        <section class="main__introduce">
-            <h2 class="main__introduce--heading">회사소개</h2>
 
+        <section class="main__intro">
+            <h2 class="main__intro-heading">회사소개</h2>
+            <!-- 숨김처리 필요 -->
+            <div class="main__intro-text">일상에 필요한 모든것을 쉽고 간편하게 만들어 갑니다</div>
+            <button class="main__intro-button">자세히보기</button>
         </section>
+
         <section class="main__service">
-            <h2 class="main__service--heading">서비스소개</h2>
-            <ul class="list__service">
-                <li class="list__service--item">가사도우미</li>
-                <li class="list__service--item">이사</li>
-                <li class="list__service--item">다른서비스
-                    <ul class="sublist__service">
-                        <li class="sublist__service--item">이사 청소</li>
-                        <li class="sublist__service--item">침대 가전 청소</li>
-                        <li class="sublist__service--item">펫시팅</li>
+            <h2 class="main__service-heading">서비스소개</h2>
+            <!-- 숨김처리 필요 -->
+            <ul class="main__service-list">
+                <li class="main__service-list-item">가사도우미</li>
+                <li class="main__service-list-item">이사</li>
+                <li class="main__service-list-item">다른서비스
+                    <ul class="main__service-sublist">
+                        <li class="main__service-sublist-item">이사 청소</li>
+                        <li class="main__service-sublist-item">침대 가전 청소</li>
+                        <li class="main__service-sublist-item">펫시팅</li>
                     </ul>
                 </li>
-                <li class="list__service--item">더 많은 서비스</li>
+                <li class="main__service-list-item">
+                    더 많은 서비스 인테리어, 도배장판, 세차 등 다양한 홈 서비스를 미소에서 예약하세요.
+                    <button class="main__service-list-item-button">자세히보기</button>
+                </li>
             </ul>
         </section>
+
         <section class="main__slogan">
-            <h2 class="main__slogan--heading">회사슬로건</h2>
+            <h2 class="main__slogan-heading">회사슬로건</h2>
+                        <!-- 숨김처리 필요 -->
+            <div class="main__slogan-slogan">
+                <h3 class="main__slogan-slogan-heading">고객을 우선으로 생각합니다</h3>
+                <p class="main__slogan-slogan-text">모든 고객이 만족할 수 있는 최고의 서비스를 만들기 위해 미소는 고객을 먼저 생각합니다.</p>
+            </div>
+            <div class="main__slogan-qual">
+                <h4 class="main__slogan-qual-heading">품질을 완벽하게</h4>
+                <p class="main__slogan-qual-text">서비스 태도, 시간, 품질 기준에 따라 만족스러운 서비스를 만들어 나갑니다.</p>
+                <button class="main__slogan-qual-button">자세히보기</button>
+            </div>
+            <div class="main__slogan-use">
+                <h4 class="main__slogan-use-heading">이용은 간편하게</h4>
+                <p class="main__slogan-use-text">복잡한 절차 없이 몇번의 터치로 서비스 예약이 가능합니다.</p>
+                <button class="main__slogan-use-apple">애플 앱스토어 다운로드</button>
+                <button class="main__slogan-use-google">구글 플레이 스토어 다운로드</button>
+            </div>
+
         </section>
     </main>  
+
     <article class="article__review">
-        <h2 class="article__review--heading">이용후기</h2>
+        <h2 class="article__review-heading">이용후기</h2>
+        <!-- 숨김처리 필요 -->
      </article>
+
     <article class="article__work">
-        <h2 class="article__work--heading">채용공고</h2>
+        <h2 class="article__work-heading">채용공고</h2>
+        <!-- 숨김처리 필요 -->
     </article>
     <footer>
         footer
