@@ -1,7 +1,15 @@
 @import url(./normalize.css);
 
+
+
+/* 헤더 영역 */
 .header {
-    background-color: cornflowerblue;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
 }
 .header__logo {
     background-image: url(../image/logo.png);
@@ -15,17 +23,15 @@
 .header__title {
     font-size: 10px;  /* 임시속성 */
     opacity: 0;
+/* 숨김처리 필요 속성 */
 }
-.header__nav-flex {
+.header__nav--flex {
     display: flex;
     max-width: 1024px;
     margin: 0 auto;
-
-
 }
 .header__nav {
     width: 100%;
-
 }
 .header__nav-list {
     display: flex;
@@ -33,8 +39,6 @@
     margin: 0;
     padding-left: 0;
     width: 100%;
-
-
 }
 .header__nav-list li:nth-child(4) {
     margin-left: auto;
@@ -44,15 +48,54 @@
     line-height: 80px;
     cursor: pointer;
 }
-
 .header__nav-list-item a {
     display: block;
     text-decoration: none;
     font-size: 15px;
     color: inherit;
 }
-
-
 .header__nav-sublist {
     display: none;
+}
+
+
+/* 메인 예약 섹션 */
+.main__booking {
+    position: relative;
+    z-index: -1;
+    height: 852px;
+}
+.main__booking--bg1 {
+    background-image: url(../image/main-01-desktop.jpg);
+    background-position-x: center;
+    background-size: cover;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.main__booking--bg2 {
+    background-image: url(../image/main-02-desktop.jpg);
+    background-position-x: center;
+    background-size: cover;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.main__booking--bg3 {
+    background-image: url(../image/main-03-desktop.jpg);
+    background-position-x: center;
+    background-size: cover;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.main__booking-heading {
+    margin: 0;
+    /* 숨김처리 필요 */
 }
