@@ -1,12 +1,23 @@
 @import url(./normalize.css);
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
 
 /* 헤더 영역 */
 .header {
-    background-color: white;
+    /* background-color: #fff;
+    opacity: 1; */
+    color: #fff;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    transition-property: background, color;
+}
+.header::after {
+    content: "";
+    background-color: #fff;
+    color: #000;
 }
 .header__logo {
     background-image: url(../image/logo.png);
@@ -74,9 +85,8 @@
     right: 0;
     z-index: 3;
     animation-name: booking_bg_ani1;
-    animation-duration: 2s;
-    animation-delay: 3s;
-    /* animation-iteration-count: infinite; */
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
 }
 .main__booking--bg2 {
     background-image: url(../image/main-02-desktop.jpg);
@@ -89,9 +99,8 @@
     right: 0;
     z-index: 2;
     animation-name: booking_bg_ani2;
-    animation-duration: 2s;
-    animation-delay: 8s;
-    /* animation-iteration-count: infinite; */
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
 }
 .main__booking--bg3 {
     background-image: url(../image/main-03-desktop.jpg);
@@ -104,22 +113,43 @@
     right: 0;
     z-index: 1;
     animation-name: booking_bg_ani3;
-    animation-duration: 2s;
-    animation-delay: 13s;
-    /* animation-iteration-count: infinite; */
+    animation-duration: 15s;
+    animation-iteration-count: infinite; 
 }
+
 @keyframes booking_bg_ani1 {
     0% {
         opacity: 100;
     }
-    100% {
+    20% {
+        opacity: 100;
+    }
+    33% {
         opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
     }
 }
 
 @keyframes booking_bg_ani2 {
     0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    33% {
         opacity: 100;
+    }
+    53% {
+        opacity: 100;
+    }
+    67% {
+        opacity: 0;
     }
     100% {
         opacity: 0;
@@ -127,6 +157,15 @@
 }
 @keyframes booking_bg_ani3 {
     0% {
+        opacity: 0;
+    }
+    53% {
+        opacity: 0;
+    }
+    67% {
+        opacity: 100;
+    }
+    80% {
         opacity: 100;
     }
     100% {
@@ -134,12 +173,50 @@
     }
 }
 
-/* .main__booking--bg {
-    position: absolute;
+.main__booking--flex {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 200px;
+    z-index: 4;
+    background-position-x: center;
+    background-size: cover;
     height: inherit;
-    animation-name: booking_ani;
+    max-width: 830px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+}
+.main__booking-intro {
+    height: 160px;
+    margin: 0;
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 16px;
+    line-height: 80px;
+}
 
-} */
+.main__booking-text {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: normal;
+    margin: 0;
+}
+.main__booking-button {
+    margin-top: 80px;
+    width: 256px;
+    height: 56px;
+    background-color: rgb(5, 92, 245);
+    border-radius: 2px;
+    border: medium none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
 .main__booking-heading {
     margin: 0;
     /* 숨김처리 필요 */
