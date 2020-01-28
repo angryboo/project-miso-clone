@@ -11,7 +11,7 @@
 <body>
     <header class="header">
         <div class="header__nav--flex">            
-            <a href="#" class="header__logo"><h1 class="header__title">미소</h1></a>
+            <a href="#" class="header__logo"><h1 class="a11y-hidden">미소</h1></a>
             <nav class="header__nav">
                 <!-- h1 tag를 로고로 사용 -->
                 <ul class="header__nav-list">
@@ -33,7 +33,7 @@
     </header>
     <main>
         <section class="main__booking">
-            <h2 class="main__booking-heading">예약하기</h2>
+            <h2 class="a11y-hidden">예약하기</h2>
             <!-- 숨김처리 필요 -->
             <div class="main__booking--bg1"></div>
             <div class="main__booking--bg2"></div>
@@ -41,29 +41,43 @@
             <!-- <div class="main__booking--bg"></div> -->
             <div class="main__booking--flex">
                 <h3 class="main__booking-intro">미소<br>일상의 변화</h3>
-                <p class="main__booking-text">모두의 일상이 행복하도록<br>미소가 함께할게요</p>
+                <div class="main__booking-text">모두의 일상이 행복하도록<br>미소가 함께할게요</div>
                 <button class="main__booking-button">예약하기</button>
             </div>
         </section>
 
         <section class="main__intro">
-            <h2 class="main__intro-heading">회사소개</h2>
+            <h2 class="a11y-hidden">회사소개</h2>
             <!-- 숨김처리 필요 -->
-            <div class="main__intro-text">일상에 필요한 모든것을 쉽고 간편하게 만들어 갑니다</div>
-            <button class="main__intro-button">자세히보기</button>
+            <div class="main__intro--flex">
+                <div class="main__intro--flexbox1">
+                    <div class="main__intro-text">일상에 필요한 모든것을<br>쉽고 간편하게 만들어 갑니다</div>
+                    <button class="main__intro-button">자세히보기</button>
+                </div>
+                <div class="main__intro--bg"></div>
+            </div>
         </section>
 
         <section class="main__service">
-            <h2 class="main__service-heading">서비스소개</h2>
+            <h2 class="a11y-hidden">서비스소개</h2>
             <!-- 숨김처리 필요 -->
+            <div class="main__service-intro">생활의 모든 것 홈서비스 미소</div>
             <ul class="main__service-list">
-                <li class="main__service-list-item">가사도우미</li>
-                <li class="main__service-list-item">이사</li>
+                <li class="main__service-list-item">
+                    <a href="#">가사도우미
+                        <span>쉽고 간단한 내집 청소</span>
+                    </a>
+                </li>
+                <li class="main__service-list-item">
+                    <a href="#">이사
+                        <span>한번 방문 견적비교 끝</span>
+                    </a>
+                </li>
                 <li class="main__service-list-item">다른서비스
                     <ul class="main__service-sublist">
-                        <li class="main__service-sublist-item">이사 청소</li>
-                        <li class="main__service-sublist-item">침대 가전 청소</li>
-                        <li class="main__service-sublist-item">펫시팅</li>
+                        <li class="main__service-sublist-item"><a href="#">이사 청소</a></li>
+                        <li class="main__service-sublist-item"><a href="#">침대 가전 청소</a></li>
+                        <li class="main__service-sublist-item"><a href="#">펫시팅</a></li>
                     </ul>
                 </li>
                 <li class="main__service-list-item">
@@ -105,7 +119,6 @@
         <!-- 숨김처리 필요 -->
     </article>
     <footer>
-        footer
     </footer>
 </body>
 </html>
