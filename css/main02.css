@@ -1,6 +1,11 @@
 @import url(./normalize.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
+    font-weight: inherit;
+    margin: 0;
+    font-size: inherit;
+    line-height: 1;
 }
 .a11y-hidden, legend {
     position: absolute;
@@ -10,6 +15,22 @@ h1, h2, h3, h4, h5, h6 {
     margin: -1px;
     clip: rect(0,0,0,0);
     clip-path: polygon(0 0, 0 0, 0 0);
+}
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.4rem;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 
@@ -253,13 +274,12 @@ main {
     padding-top: 88px;
     padding-bottom: 87px;
     justify-content: space-between;
-
+    border-bottom: 1px solid #a3a7ae;
 }
 .main__intro--flexbox1 {
 
 }
 .main__intro-text {
-    margin-bottom: bold;
     font-size: 31.2px;
     font-weight: bold;
     line-height: 1.5;
@@ -269,8 +289,10 @@ main {
     background-color: #fff;
     color: rgb(5, 92, 245);
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
+    margin-top: 18px;
+    padding: 0;
 }
 .main__intro--bg {
     background-image: url(../image/main-2@2x.png);
@@ -287,11 +309,11 @@ main {
     font-size: 40px;
     font-weight: bold;
 }
-
 .main__service-list {
     width: 830px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0 90px 0;
+    border-bottom: 1px solid #a3a7ae;
     display: grid;
     grid-template-rows: 288px 247px 104px;
     grid-template-columns: 1fr 1fr;
@@ -307,12 +329,6 @@ main {
     box-sizing: border-box;
 
 }
-
-/* .main__service-list-item h3 {
-    margin: 0 0 12px 0;
-    font-size: 24px;
-    font-weight: bold; 
-}*/
 .main__service-list-item span {
     font-size: 18px;
     margin-top: 12px;
@@ -331,7 +347,6 @@ main {
     display: block;
     background-size: cover;
 }
-
 .main__service-list-item:nth-child(2) {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -343,7 +358,6 @@ main {
     display: block;
     background-size: cover;
 }
-
 .main__service-list-item:nth-child(3) {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
@@ -372,9 +386,7 @@ main {
     color: inherit;
     background-size: cover;
     box-sizing: border-box;
-
 }
-
 .main__service-sublist-item:nth-child(1) a {
     background-image: url(../image/main-3-3-desktop@2x.jpg);
 }
@@ -384,11 +396,60 @@ main {
 .main__service-sublist-item:nth-child(3) a {
     background-image: url(../image/main-3-5-desktop@2x.jpg);
 }
-
-
 .main__service-list-item:nth-child(4) {
     grid-column: 1 / 3;
     grid-row: 3 / 4;
     background-color: rgb(239, 247, 255);
-    padding: 32px 24px;
+    padding: 28px 32px;
+    display: flex;
 }
+.main__service-list-item:nth-child(4) div {
+    margin-left: 20px;
+}
+.main__service-list-item-button {
+    border: none;
+    background-color: inherit;
+    color: rgb(5, 92, 245);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+    height: 0em;
+    margin-left: auto;
+}
+.main__service-list-item:nth-child(4) h3 {
+    font-size: 17px;
+    font-weight: bold;
+}
+.main__service-list-item:nth-child(4) span {
+    font-size: 15px;
+}
+
+
+/* 슬로건 섹션 */
+
+.main__slogan {
+
+}
+.main__slogan-slogan {
+    max-width: 830px;
+    margin: 63px auto 0 auto;
+}
+.main__slogan-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 830px;
+    margin: 0 auto;
+    padding-left: 0;
+    list-style: none;
+}
+.main__slogan-list-item {
+    display: flex;
+    max-height: 300px;
+}
+.main__slogan-list img {
+    width: 409px;
+    order: -1;
+}
+
+
