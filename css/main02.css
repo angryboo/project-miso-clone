@@ -1,3 +1,8 @@
+
+
+
+/* ----------CSS 모듈화--------------- */
+
 @import url(./normalize.css);
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
@@ -7,6 +12,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
     line-height: 1;
 }
+
 .a11y-hidden, legend {
     position: absolute;
     width: 1px;
@@ -32,10 +38,30 @@ body {
     font-size: 1.4rem;
     font-family: 'Noto Sans KR', sans-serif;
 }
+/* 모든 em tag를 Block 요소로 쓰기 때문에 직접 지정 */
+em {
+    font-style: normal;
+    display: block;
+}
+/* 자세히보기 버튼 */
+.button-more {
+    border: none;
+    background: transparent;
+    color: rgb(5, 92, 245);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* ------------------------------------ */
 
 
 
-/* 헤더 영역 */
+
+
+/* ----------헤더 영역---------------- */
+
 .header {
     background-color: #fff;
     z-index: 10;
@@ -46,19 +72,13 @@ body {
     left: 0;
     right: 0;
 }
-/* .header::after {
-    content: "";
-    background-color: #fff;
-    color: #000;
-} */
 .header__logo {
-    background-image: url(../image/logo.png);
-    background-size: 62px;
-    background-repeat: no-repeat;
-    background-position: center;
     width: 62px;
     padding: 0 12px;
     margin-right: 36px;
+}
+.header__logo svg {
+    margin-top: 29px;
 }
 .header__title {
     font-size: 1px;  /* 임시속성 */
@@ -100,10 +120,10 @@ body {
 }
 
 
-/* 메인 예약 섹션 */
-main {
-    /* position: relative;    */
-}
+
+
+/* -------- 메인 예약 섹션 ------------ */
+
 .main__booking {
     position: relative;
     z-index: 0;
@@ -151,7 +171,6 @@ main {
     animation-duration: 15s;
     animation-iteration-count: infinite; 
 }
-
 @keyframes booking_bg_ani1 {
     0% {
         opacity: 100;
@@ -207,8 +226,6 @@ main {
         opacity: 0;
     }
 }
-
-
 .main__booking--flex {
     display: flex;
     flex-direction: column;
@@ -234,7 +251,6 @@ main {
     margin-bottom: 16px;
     line-height: 80px;
 }
-
 .main__booking-text {
     font-size: 20px;
     line-height: 30px;
@@ -253,19 +269,12 @@ main {
     color: #fff;
     cursor: pointer;
 }
-.main__booking-heading {
-    margin: 0;
-    font-size: 1px;
-    /* 숨김처리 필요 */
-}
 
-/* 회사 소개 영역 */
 
-.main__intro {
 
-}
 
-/* 숨김처리 필요 */
+/* --------- 인트로 섹션 ---------------- */
+
 .main__intro--flex {
     display: flex;
     width: 830px;
@@ -276,23 +285,11 @@ main {
     justify-content: space-between;
     border-bottom: 1px solid #a3a7ae;
 }
-.main__intro--flexbox1 {
-
-}
 .main__intro-text {
     font-size: 31.2px;
     font-weight: bold;
     line-height: 1.5;
-}
-.main__intro-button {
-    border: none;
-    background-color: #fff;
-    color: rgb(5, 92, 245);
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    margin-top: 18px;
-    padding: 0;
+    margin-bottom: 18px;
 }
 .main__intro--bg {
     background-image: url(../image/main-2@2x.png);
@@ -301,7 +298,10 @@ main {
     height: 400px;
 }
 
-/* 서비스섹션 */
+
+
+
+/* ------------- 서비스 소개 섹션 -------------- */
 
 .main__service-intro {
     max-width: 830px;
@@ -335,7 +335,6 @@ main {
     display: block;
     font-weight: normal;
 }
-
 .main__service-list-item:nth-child(1) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -405,51 +404,135 @@ main {
 }
 .main__service-list-item:nth-child(4) div {
     margin-left: 20px;
+    flex-grow: 1;
 }
-.main__service-list-item-button {
-    border: none;
-    background-color: inherit;
-    color: rgb(5, 92, 245);
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    padding: 0;
+.main__service-list-item button {
     height: 0em;
-    margin-left: auto;
 }
-.main__service-list-item:nth-child(4) h3 {
+/* 자세히보기 버튼 위쪽 정렬 */
+.main__service-list-item:nth-child(4) em {
     font-size: 17px;
     font-weight: bold;
+    line-height: 1em;
 }
 .main__service-list-item:nth-child(4) span {
     font-size: 15px;
 }
 
 
-/* 슬로건 섹션 */
 
-.main__slogan {
 
-}
-.main__slogan-slogan {
+/* -------- 슬로건 섹션 -------------- */
+
+.main__slogan-slogan-heading {
     max-width: 830px;
     margin: 63px auto 0 auto;
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+}
+.main__slogan-slogan-text {
+    max-width: 830px;
+    margin: 20px auto 64px auto;
+    display: block;
+    font-size: 20px;
 }
 .main__slogan-list {
-    display: flex;
-    flex-direction: column;
     max-width: 830px;
     margin: 0 auto;
-    padding-left: 0;
+    padding: 0 0 88px 0;
     list-style: none;
+
 }
 .main__slogan-list-item {
     display: flex;
-    max-height: 300px;
+    justify-content: space-between;
+    margin-top: 40px;
 }
-.main__slogan-list img {
+.main__slogan-list--textbox {
+    width: 373px;
+}
+.main__slogan-list-item img {
     width: 409px;
     order: -1;
 }
+.main__slogan-list-item em {
+    font-size: 21px;
+    font-weight: bold;
+    margin: 5px 0 0 0;
+}
+.main__slogan-list-item p {
+    margin: 10px 0 18px 0;
+    line-height: 1.5;
+}
+.main__slogan-list-item:nth-child(1) p {
+    font-size: 17px;
+}
+.main__slogan-list-item:nth-child(2) p, 
+.main__slogan-list-item:nth-child(3) p {
+    font-size: 15px;
+}
+.main__slogan-list-item:nth-child(2) button {
+    border: none;
+    background: transparent;
+    width: 128px;
+    height: 38.3px;
+    background-size: cover;
+    padding: 38.3px 0 0 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+.main__slogan-list-item:nth-child(2) .button-apple {
+    background-image: url(../image/apple-store-badge.svg);
+}
+.main__slogan-list-item:nth-child(2) .button-google {
+    background-image: url(../image/google-play-image.png);
+    margin-left: 20px;
+}
+/* .main__slogan--bgbox {
+    width: 409px;
+    height: 300px;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.main__slogan--bg1 {
+    background-image: url(../image/main-4-1@2x.png);
+}
+.main__slogan--bg2 {
+    background-image: url(../image/main-4-2@2x.png);
+}
+.main__slogan--bg3 {
+    background-image: url(../image/main-4-3@2x.png);
+} */
 
 
+
+
+/* --------- 이용후기 섹션 --------- */
+
+.aside__review {
+    background-color: rgb(0, 57, 91);
+    padding: 88px 0;
+}
+.aside__review-text {
+    font-size: 40px;
+    margin: 0 auto 68px auto;
+    color: #fff;
+    display: block;
+    max-width: 1000px;
+}
+.aside__review-list {
+    list-style: none;
+    display: flex;
+    max-width: 1000px;
+    justify-content: space-between;
+    padding: 0 0 0 0;
+    margin: 0 auto;
+}
+.aside__review-list-item {
+    background-color: #fff;
+    width: 320px;
+    height: 232px;
+}
