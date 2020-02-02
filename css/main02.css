@@ -118,6 +118,7 @@ em {
     text-decoration: none;
     color: inherit;
 }
+
 .nav__list-item:nth-child(3) > a {
     position: relative;
 }
@@ -129,13 +130,20 @@ em {
     width: 90px;
     height: 2px;
     background-color: #2e3035;
-    top: 70px
+    top: 70px;
 }
+
 .nav__sublist {
     padding: 0 0 20px 0;
     list-style: none;
+}
+.sublist-hide {
     display: none;
 }
+.sublist-act {
+    display: block;
+}
+
 .nav__sublist-item {
     line-height: 40px;
 }
@@ -152,14 +160,10 @@ em {
     z-index: 0;
     height: 852px;
 }
-.booking__flex-container {
-    display: flex;
-    flex-direction: column;
+.booking__container {
     box-sizing: border-box;
     padding-top: 200px;
     z-index: 4;
-    background-position-x: center;
-    background-size: cover;
     height: inherit;
     max-width: 830px;
     margin: 0 auto;
@@ -176,6 +180,7 @@ em {
     font-weight: 900;
     margin-bottom: 16px;
     line-height: 80px;
+    display: block;
 }
 .booking__sub-text {
     font-size: 2rem;

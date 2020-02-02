@@ -7,6 +7,8 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"> -->
     <link rel="stylesheet" href="./css/main02.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+    <script src="./js/jquery.min.js" defer></script>
+    <script src="./js/main.js" defer></script>
     <title>미소(clone)</title>
 </head>
 <body>
@@ -27,8 +29,8 @@
                 <ul class="nav__list">
                     <li class="nav__list-item"><a href="#" title="가사도우미 페이지로 이동" tabindex="0">가사도우미</a></li>
                     <li class="nav__list-item"><a href="#" title="이사 페이지로 이동">이사</a></li>
-                    <li class="nav__list-item"><a href="#" title="다른 홈 서비스 항목 펼치기">다른 홈 서비스</a>
-                        <ul class="nav__sublist">
+                    <li class="nav__list-item nav__drop-down"><a href="#" title="다른 홈 서비스 항목 펼치기">다른 홈 서비스</a>
+                        <ul class="nav__sublist sublist-hide">
                             <li class="nav__sublist-item"><a href="#" title="이사청소 페이지로 이동">이사청소</a></li>
                             <li class="nav__sublist-item"><a href="#" title="침대 가전청소 페이지로 이동">침대 가전청소</a></li>
                             <li class="nav__sublist-item"><a href="#" title="펫시팅 페이지로 이동">펫시팅</a></li>
@@ -46,10 +48,10 @@
         <!-- 메인 예약 섹션 -->
         <section class="booking">
             <h2 class="a11y-hidden">예약하기</h2>
-            <div class="booking__flex-container">
+            <div class="booking__container">
                 <strong class="booking__main-text">미소<br>일상의 변화</strong>
                 <div class="booking__sub-text">모두의 일상이 행복하도록<br>미소가 함께할게요</div>
-                <button class="booking__button">예약하기</button>
+                <button class="booking__button" title="예약페이지 바로가기">예약하기</button>
             </div>
             <div class="booking__1st-background"></div>
             <div class="booking__2nd-background"></div>
@@ -62,7 +64,7 @@
             <div class="intro__flex-container">
                 <div class="intro__flex-item">
                     <em class="intro__text">일상에 필요한 모든것을<br>쉽고 간편하게 만들어 갑니다</em>
-                    <button class="button-more">자세히보기
+                    <button class="button-more" title="미소 소개 자세히 보기">자세히보기
                         <i class="fas fa-angle-right"></i>
                     </button>
                 </div>
@@ -76,13 +78,13 @@
             <div class="service__text">생활의 모든 것 홈서비스 미소</div>
             <ul class="service__list">
                 <li class="service__list-item">
-                    <a href="#">
+                    <a href="#" title="가사도우미 페이지로 이동">
                         <em>가사도우미</em>
                         <span>쉽고 간단한 내집 청소</span>
                     </a>
                 </li>
                 <li class="service__list-item">
-                    <a href="#">
+                    <a href="#" title="이사 페이지로 이동">
                         <em>이사</em>
                         <span>한번 방문 견적비교 끝</span>
                     </a>
@@ -91,13 +93,13 @@
                     <em>다른서비스</em>
                     <ul class="service__sublist">
                         <li class="service__sublist-item">
-                            <a href="#">이사 청소</a>
+                            <a href="#" title="이사 청소 페이지로 이동">이사 청소</a>
                         </li>
                         <li class="service__sublist-item">
-                            <a href="#">침대 가전 청소</a>
+                            <a href="#" title="침대 가전 청소 페이지로 이동">침대 가전 청소</a>
                         </li>
                         <li class="service__sublist-item">
-                            <a href="#">펫시팅</a>              
+                            <a href="#" title="펫시팅 페이지로 이동">펫시팅</a>              
                         </li>
                     </ul>
                 </li>
@@ -107,7 +109,7 @@
                         <em>더 많은 서비스</em>
                         <span>인테리어, 도배장판, 세차 등 다양한 홈 서비스를 미소에서 예약하세요.</span>
                     </div> 
-                    <button class="button-more">
+                    <button class="button-more" title="더 많은 서비스 페이지로 이동">
                         자세히보기
                         <i class="fas fa-angle-right"></i>
                     </button>
@@ -125,33 +127,33 @@
                     <div class="slogan__list--textbox">
                         <em>품질을 완벽하게</em>
                         <p>서비스 태도, 시간, 품질 기준에 따라 만족스러운 서비스를 만들어 나갑니다.</p>
-                        <button class="button-more">자세히보기
+                        <button class="button-more" title="미소 품질 관리 페이지로 이동">자세히보기
                             <i class="fas fa-angle-right"></i>
                         </button>
                     </div>
                     <!-- <div class="slogan--bg1 slogan--bgbox"></div> -->
-                    <img src="./image/main-4-1@2x.png" alt="">
+                    <img src="./image/main-4-1@2x.png" alt="미소 품질관리 보조 이미지">
                 </li>
                 <li class="slogan__list-item">
                     <div class="slogan__list--textbox">
                         <em>이용은 간편하게</em>
                         <p>복잡한 절차 없이 몇번의 터치로 서비스 예약이 가능합니다.</p>
-                        <button class="button-apple">애플 앱스토어 다운로드</button>
-                        <button class="button-google">구글 플레이 스토어 다운로드</button>
+                        <button class="button-apple" title="애플 앱스토어 바로가기">애플 앱스토어 다운로드</button>
+                        <button class="button-google" title="구글 플레이 스토이 바로가기">구글 플레이 스토어 다운로드</button>
                     </div>
                     <!-- <div class="slogan--bg2 slogan--bgbox"></div> -->
-                    <img src="./image/main-4-2@2x.png" alt="">
+                    <img src="./image/main-4-2@2x.png" alt="미소 서비스 예약 보조 이미지">
                 </li>
                 <li class="slogan__list-item">
                     <div class="slogan__list--textbox">
                         <em>파트너를 위한 약속</em>
                         <p>만족스런 서비스를 위해 전문 교육센터, 보너스 정책, 파트너 앱을 제공합니다</p>
-                        <button class="button-more">자세히보기
+                        <button class="button-more" title="미소 파트너 페이지로 이동">자세히보기
                             <i class="fas fa-angle-right"></i>
                         </button>
                     </div>
                     <!-- <div class="slogan--bg3 slogan--bgbox"></div> -->
-                    <img src="./image/main-4-3@2x.png" alt="">
+                    <img src="./image/main-4-3@2x.png" alt="미소 고객 관리 보조 이미지">
                 </li>
             </ul>            
         </section>
