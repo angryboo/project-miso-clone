@@ -42,9 +42,9 @@ tabs.on('click', function(e){
 });
 
 
-
 tabButton.on('click', function(e){
-    e.preventDefault();
     $(this).next().slideToggle();
+    $(this).find('i').toggleClass("fas fa-angle-down");
+    $(this).find('i').toggleClass("fas fa-angle-up");
 });
 
