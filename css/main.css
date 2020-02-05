@@ -72,6 +72,9 @@ em {
 
 /* ---------- 공통 - 헤더 영역---------------- */
 
+
+
+
 .header {
     z-index: 10;
     opacity: 1;
@@ -82,19 +85,26 @@ em {
     color: #fff;
     transition-duration: 0.2s;
 }
+.header path {
+    fill: #fff;
+}
 .header-page {
     color: inherit;
 }
 .scroll-bottom {
     background-color: #fff;
     color: inherit;
-    box-shadow: 0 1px 5px 1px lightgray;
+    box-shadow: 0 0.5px 3px 0.5px lightgray;
     ;
+}
+.scroll-bottom path, .header-page path {
+    fill: #055CF5;
 }
 .header__logo {
     width: 62px;
     padding: 0 12px;
     margin-right: 36px;
+    height: 80px;
 }
 .header__logo svg {
     margin-top: 29px;
@@ -522,7 +532,12 @@ footer {
     width: 373px;
 }
 .slogan__list-item img {
+    width: 100%;
+    height: auto;
+}
+.slogan__list--imgbox {
     width: 409px;
+    height: auto;
     order: -1;
 }
 .slogan__list-item em {
@@ -555,23 +570,6 @@ footer {
     background-image: url(../image/google-play-image.png);
     margin-left: 20px;
 }
-/* .slogan--bgbox {
-    width: 409px;
-    height: 300px;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.slogan--bg1 {
-    background-image: url(../image/main-4-1@2x.png);
-}
-.slogan--bg2 {
-    background-image: url(../image/main-4-2@2x.png);
-}
-.slogan--bg3 {
-    background-image: url(../image/main-4-3@2x.png);
-} */
 
 
 
@@ -601,7 +599,7 @@ footer {
 .review__list-item {
     background-color: #fff;
     width: 320px;
-    height: 232px;
+    min-height: 232px;
     box-sizing: border-box;
     padding: 24px 32px;
 }
