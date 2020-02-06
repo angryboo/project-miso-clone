@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"> -->
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
     <script src="./js/jquery.min.js" defer></script>
     <script src="./js/main.js" defer></script>
@@ -68,8 +68,8 @@
         <section class="booking">
             <h2 class="a11y-hidden">예약하기</h2>
             <div class="booking__container">
-                <strong class="booking__main-text">미소<br>일상의 변화</strong>
-                <div class="booking__sub-text">모두의 일상이 행복하도록<br>미소가 함께할게요</div>
+                <span class="booking__main-text">미소<br>일상의 변화</span>
+                <p class="booking__sub-text">모두의 일상이 행복하도록<br>미소가 함께할게요</p>
                 <button class="booking__button" title="예약페이지 바로가기">예약하기</button>
             </div>
             <div class="booking__1st-background"></div>
@@ -82,7 +82,7 @@
             <h2 class="a11y-hidden">회사소개</h2>
             <div class="intro__flex-container">
                 <div class="intro__flex-item">
-                    <em class="intro__text">일상에 필요한 모든것을<br>쉽고 간편하게 만들어 갑니다</em>
+                    <p class="intro__text">일상에 필요한 모든것을<br>쉽고 간편하게 만들어 갑니다</p>
                     <button class="button-more" title="미소 소개 자세히 보기">자세히보기
                         <i class="fas fa-angle-right"></i>
                     </button>
@@ -94,39 +94,39 @@
         <!-- 서비스 소개 섹션 -->
         <section class="service">
             <h2 class="a11y-hidden">서비스소개</h2>
-            <div class="service__text">생활의 모든 것 홈서비스 미소</div>
+            <span class="service__text">생활의 모든 것 홈서비스 미소</span>
             <ul class="service__list">
                 <li class="service__list-item">
-                    <a href="#" title="가사도우미 페이지로 이동">
-                        <em>가사도우미</em>
+                    <a href="#" role="button" title="가사도우미 페이지로 이동">
+                        <span>가사도우미</span>
                         <span>쉽고 간단한 내집 청소</span>
                     </a>
                 </li>
                 <li class="service__list-item">
-                    <a href="#" title="이사 페이지로 이동">
-                        <em>이사</em>
+                    <a href="#" role="button" title="이사 페이지로 이동">
+                        <span>이사</span>
                         <span>한번 방문 견적비교 끝</span>
                     </a>
                 </li>
                 <li class="service__list-item">
-                    <em>다른서비스</em>
+                    <span>다른서비스</em>
                     <ul class="service__sublist">
                         <li class="service__sublist-item">
-                            <a href="#" title="이사 청소 페이지로 이동">이사 청소</a>
+                            <a href="#" role="button" title="이사 청소 페이지로 이동">이사 청소</a>
                         </li>
                         <li class="service__sublist-item">
-                            <a href="#" title="침대 가전 청소 페이지로 이동">침대 가전 청소</a>
+                            <a href="#" role="button" title="침대 가전 청소 페이지로 이동">침대 가전 청소</a>
                         </li>
                         <li class="service__sublist-item">
-                            <a href="#" title="펫시팅 페이지로 이동">펫시팅</a>              
+                            <a href="#" role="button" title="펫시팅 페이지로 이동">펫시팅</a>              
                         </li>
                     </ul>
                 </li>
                 <li class="service__list-item">
                     <i class="fas fa-home"></i>
                     <div>
-                        <em>더 많은 서비스</em>
-                        <span>인테리어, 도배장판, 세차 등 다양한 홈 서비스를 미소에서 예약하세요.</span>
+                        <span>더 많은 서비스</span>
+                        <p>인테리어, 도배장판, 세차 등 다양한 홈 서비스를 미소에서 예약하세요.</p>
                     </div> 
                     <button class="button-more" title="더 많은 서비스 페이지로 이동">
                         자세히보기
@@ -139,41 +139,41 @@
         <!-- 슬로건 섹션 -->
         <section class="slogan">
             <h2 class="a11y-hidden">회사슬로건</h2>
-            <strong class="slogan__main-slogan">고객을 우선으로 생각합니다</strong>
-            <span class="slogan__slogan-text">모든 고객이 만족할 수 있는 최고의 서비스를 만들기 위해 미소는 고객을 먼저 생각합니다.</span>
+            <em class="slogan__main-slogan">고객을 우선으로 생각합니다</em>
+            <p class="slogan__slogan-text">모든 고객이 만족할 수 있는 최고의 서비스를 만들기 위해 미소는 고객을 먼저 생각합니다.</p>
             <ul class="slogan__list">
                 <li class="slogan__list-item">
-                    <div class="slogan__list--textbox">
+                    <div class="slogan__list-textbox">
                         <em>품질을 완벽하게</em>
                         <p>서비스 태도, 시간, 품질 기준에 따라 만족스러운 서비스를 만들어 나갑니다.</p>
                         <button class="button-more" title="미소 품질 관리 페이지로 이동">자세히보기
                             <i class="fas fa-angle-right"></i>
                         </button>
                     </div>
-                    <div class="slogan__list--imgbox">
+                    <div class="slogan__list-imgbox">
                         <img src="./image/main-4-1@2x.png" alt="미소 품질관리 보조 이미지">
                     </div>
                 </li>
                 <li class="slogan__list-item">
-                    <div class="slogan__list--textbox">
+                    <div class="slogan__list-textbox">
                         <em>이용은 간편하게</em>
                         <p>복잡한 절차 없이 몇번의 터치로 서비스 예약이 가능합니다.</p>
                         <button class="button-apple" title="애플 앱스토어 바로가기">애플 앱스토어 다운로드</button>
                         <button class="button-google" title="구글 플레이 스토이 바로가기">구글 플레이 스토어 다운로드</button>
                     </div>
-                    <div class="slogan__list--imgbox">
+                    <div class="slogan__list-imgbox">
                         <img src="./image/main-4-2@2x.png" alt="미소 서비스 예약 보조 이미지">
                     </div>
                 </li>
                 <li class="slogan__list-item">
-                    <div class="slogan__list--textbox">
+                    <div class="slogan__list-textbox">
                         <em>파트너를 위한 약속</em>
                         <p>만족스런 서비스를 위해 전문 교육센터, 보너스 정책, 파트너 앱을 제공합니다</p>
                         <button class="button-more" title="미소 파트너 페이지로 이동">자세히보기
                             <i class="fas fa-angle-right"></i>
                         </button>
                     </div>
-                    <div class="slogan__list--imgbox">
+                    <div class="slogan__list-imgbox">
                         <img src="./image/main-4-3@2x.png" alt="미소 고객 관리 보조 이미지">
                     </div>
                 </li>
@@ -193,7 +193,7 @@
                         <i class="fas fa-star fa-spin"></i>
                         <i class="fas fa-star fa-spin"></i>
                     </div>
-                    <div class="review__contomer">서울 김* 고객님 (가사도우미 후기)</div>
+                    <span class="review__consumer">서울 김* 고객님 (가사도우미 후기)</span>
                     <p class="review__review">미소 덕분에 우리집 광명 찾았어요! 싱크대에 오래된 묵은때를 제거하는 방법도 알려주시고, 냉장고와 가스레인지 묵은 때까지 순식간에 제거해주셨어요.</p>
                     <button class="button-more" title="김* 고객님 후기로 이동">자세히보기
                         <i class="fas fa-angle-right"></i>
@@ -207,7 +207,7 @@
                         <i class="fas fa-star fa-spin"></i>
                         <i class="fas fa-star fa-spin"></i>
                     </div>
-                    <div class="review__contomer">경기 이* 고객님 (가사도우미 후기)</div>
+                    <span class="review__consumer">경기 이* 고객님 (가사도우미 후기)</span>
                     <p class="review__review">퇴근을 하고 돌아오니 아기방이 깨끗해지고, 화장실 세면대도 반짝반짝 광이 났어요. 혹시 몰라 요청드린 것까지 세심하게 청소해주셔서 너무 좋았어요!</p>
                     <button class="button-more" title="이* 고객님 후기로 이동">자세히보기
                         <i class="fas fa-angle-right"></i>
@@ -221,7 +221,7 @@
                         <i class="fas fa-star fa-spin"></i>
                         <i class="fas fa-star fa-spin"></i>
                     </div>
-                    <div class="review__contomer">이교* 고객님 (가정이사 후기)</div>
+                    <span class="review__consumer">이교* 고객님 (가정이사 후기)</span>
                     <p class="review__review">처음에 제휴업체가 오셔서 360카메라로 집 전체를 촬영하는데, 필요한 물건이 사진에 담기니까 이사할 때 추가 요금을 방지할 수 있어 안심이 됐어요.</p>
                     <button class="button-more" title="이교* 고객님 후기로 이동">자세히보기
                         <i class="fas fa-angle-right"></i>
@@ -234,7 +234,7 @@
         <aside class="job-opening">
             <h2 class="a11y-hidden">채용공고</h2>
             <div class="job-opening__content-box">
-                <em>미소와 함께 해요</em>
+                <span>미소와 함께 해요</span>
                 <p>미소 홈 서비스를 함께 만들어갈<br>인재를 찾고 있습니다.</p>
                 <button class="button-more" title="채용 공고로 이동">자세히보기
                     <i class="fas fa-angle-right"></i>
@@ -271,8 +271,17 @@
         </div>
         <address class="footer__address">
             <div>@ 2020. 유한회사 미소. Miso, Inc. All Rights Reserved.</div>
-            <div>사업자등록번호 : 291-87-00271 | 인허가번호 : 2016-3220163-14-5-00019 | 대표이사 : CHING VICTOR COLUMBIA R | 대표전화 : 1577-8808 | 주소 : 서울특별시 논현로 86길 32, 1층</div>
+            <span>사업자등록번호 : 291-87-00271</span>
+            <span aria-hidden="true">|</span>
+            <span>인허가번호 : 2016-3220163-14-5-00019</span>
+            <span aria-hidden="true">|</span>
+            <span>대표이사 : CHING VICTOR COLUMBIA R</span> 
+            <span aria-hidden="true">|</span> 
+            <span>대표전화 : 1577-8808</span>
+            <span aria-hidden="true">|</span> 
+            <span>주소 : 서울특별시 논현로 86길 32, 1층</span>
         </address>
+        <div class="sign">HTML/CSS 학습 관련 제작한 클론 페이지 입니다___제작자 : 송부용(buyongsong@gmail.com)</div>
     </footer>
 </body>
 </html>

@@ -1,223 +1,6 @@
 
 
 
-/* ----------CSS 모듈화--------------- */
-
-@import url(./normalize.css);
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: inherit;
-    margin: 0;
-    font-size: inherit;
-    line-height: 1;
-}
-
-.a11y-hidden, legend {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    margin: -1px;
-    clip: rect(0,0,0,0);
-    clip-path: polygon(0 0, 0 0, 0 0);
-}
-.clearfix::after {
-    display: block;
-    content: "";
-    clear: both;
-}
-a {
-    text-decoration: none;
-    color: inherit;
-}
-html {
-    font-size: 10px;
-}
-body {
-    font-size: 1.5rem;
-    font-family: 'Noto Sans KR', sans-serif;
-    color: #2e3035;
-
-    
-}
-/* 모든 em tag를 Block 요소로 쓰기 때문에 직접 지정 */
-em {
-    font-style: normal;
-    display: block;
-}
-/* 자세히보기 버튼 */
-.button-more {
-    border: none;
-    background: transparent;
-    color: rgb(5, 92, 245);
-    font-weight: 700;
-    cursor: pointer;
-    padding: 0;
-}
-
-/* a:focus, button:focus, input:focus {
-    outline-style: solid;
-    outline-width: 2px;
-    outline-color: #E68A2C;
-} */
-
-
-
-/* ------------------------------------ */
-
-
-
-
-
-/* ---------- 공통 - 헤더 영역---------------- */
-
-
-
-
-.header {
-    z-index: 10;
-    opacity: 1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    color: #fff;
-    transition-duration: 0.2s;
-}
-.header path {
-    fill: #fff;
-}
-.header-page {
-    color: inherit;
-}
-.scroll-bottom {
-    background-color: #fff;
-    color: inherit;
-    box-shadow: 0 0.5px 3px 0.5px lightgray;
-    ;
-}
-.scroll-bottom path, .header-page path {
-    fill: #055CF5;
-}
-.header__logo {
-    width: 62px;
-    padding: 0 12px;
-    margin-right: 36px;
-    height: 80px;
-}
-.header__logo svg {
-    margin-top: 29px;
-}
-.header__flex-container {
-    display: flex;
-    max-width: 1024px;
-    margin: 0 auto;
-}
-.nav {
-    width: 100%;
-}
-.nav__list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-    width: 100%;
-}
-.nav__list li:nth-child(4) {
-    margin-left: auto;
-}
-.nav__list-item {
-    padding: 0 14px;
-    line-height: 80px;
-    cursor: pointer;
-}
-.nav__list-item > a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-.nav__list-item:nth-child(3) > a {
-    position: relative;
-}
-
-.nav__list-item:nth-child(3):hover::before{
-    content: "";
-    position: absolute;
-    display: block;
-    width: 90px;
-    height: 2px;
-    background-color: #2e3035;
-    top: 70px;
-}
-
-.nav__sublist {
-    padding: 0 0 20px 0;
-    list-style: none;
-}
-.sublist-hide {
-    display: none;
-}
-.sublist-act {
-    display: block;
-}
-
-.nav__sublist-item {
-    line-height: 40px;
-}
-
-
-
-
-
-/* --------- 공통 - 푸터 영역 -------- */
-
-footer {
-    background-color: rgb(38, 39, 40);
-    color: #fff;
-}
-
-.footer__flex-container {
-    display: flex;
-    max-width: 1055px;
-    margin: 0 auto;
-    padding: 24px;
-    align-items: center;
-}
-.footer__list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 0 48px;
-    flex-grow: 1;
-    display: flex;
-}
-
-.footer__list-item a {
-    padding: 10px;
-}
-.footer__page-up {
-    color: rgb(5, 92, 245);
-    padding: 10px;
-    font-size: 2rem;
-}
-.footer__address {
-    max-width: 1055px;
-    margin: 0 auto;
-    padding-bottom: 90px;
-    color: rgb(163, 167, 174);
-    font-size: 1.3rem;
-    font-style: normal;
-}
-.footer__address div:nth-child(2) {
-    margin-top: 10px;
-}
-
-
-
-
-
-
 /* -------- 메인페이지 - 메인 예약 섹션 ------------ */
 
 .booking {
@@ -388,6 +171,7 @@ footer {
     margin: 64px auto;
     font-size: 4rem;
     font-weight: bold;
+    display: block;
 }
 .service__list {
     width: 830px;
@@ -409,12 +193,13 @@ footer {
     box-sizing: border-box;
 
 }
-.service__list-item span {
+.service__list-item span:nth-child(2) {
     font-size: 1.8rem;
     margin-top: 12px;
     display: block;
     font-weight: normal;
 }
+
 .service__list-item:nth-child(1) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -490,7 +275,7 @@ footer {
     height: 0em;
 }
 /* 자세히보기 버튼 위쪽 정렬 */
-.service__list-item:nth-child(4) em {
+.service__list-item:nth-child(4) span {
     font-size: 1.7rem;
     font-weight: bold;
     line-height: 1em;
@@ -528,14 +313,14 @@ footer {
     justify-content: space-between;
     margin-top: 40px;
 }
-.slogan__list--textbox {
+.slogan__list-textbox {
     width: 373px;
 }
 .slogan__list-item img {
     width: 100%;
     height: auto;
 }
-.slogan__list--imgbox {
+.slogan__list-imgbox {
     width: 409px;
     height: auto;
     order: -1;
@@ -607,10 +392,11 @@ footer {
     margin-top: 5px;
     color: rgb(255, 200, 31);
 }
-.review__contomer {
+.review__consumer {
     margin-top: 9px;
     font-size: 1.7rem;
     font-weight: 700;
+    display: block;
 }
 .review__review {
     margin: 7px 0 10px 0;
@@ -632,9 +418,10 @@ footer {
     position: relative;
     box-sizing: border-box;
 }
-.job-opening__content-box em {
+.job-opening__content-box span {
     font-size: 4rem;
     font-weight: 700;
+    margin: 0;
 }
 .job-opening__content-box p {
     line-height: 1.5;
@@ -655,171 +442,3 @@ footer {
 
 
 
-/* ------ 고객센터 페이지 - Q & A 섹션 ------- */
-
-.consumer__heading {
-    margin: 160px auto 0 auto;
-    max-width: 830px;
-    font-weight: 500;
-}
-.consumer__maintext {
-    margin: 8px auto 0 auto;
-    max-width: 830px;
-    font-size: 5.4rem;
-    font-weight: 700;
-    line-height: 72px;
-}
-.consumer__tap-list {
-    list-style: none;
-    display: flex;
-    max-width: 830px;
-    margin: 120px auto 64px auto;
-    padding: 0;
-}
-.consumer__tap-list button {
-    border: 1px solid rgb(199, 202, 208);
-    background-color: #fff;
-    border-radius: 2px;
-    padding: 12px 16px;
-    color: rgb(98, 101, 106);
-    font-size: 1.6rem;
-    margin-left: 8px;
-    cursor: pointer;
-}
-
-
-.consumer__tap-list [aria-selected="true"] button {
-    background-color: rgb(5, 92, 245);
-    border: 1px solid rgb(5, 92, 245);
-    color: #fff;
-}
-
-
-
-.consumer__tabpanel {
-    max-width: 830px;
-    margin: 0 auto 0 auto;
-    list-style: none;
-    padding-left: 0;
-    display: none;
-}
-
-.section-act .consumer__tabpanel {
-    display: block;
-}
-
-.consumer__tabpanel-item:nth-child(2) {
-    margin-top: 40px;
-}
-
-.consumer__tabpanel-name {
-    font-size: 2.1rem;
-    font-weight: 700;
-}
-
-.consumer__tabpanel-list {
-    padding-left: 0;
-    list-style: none;
-    margin-top: 16px;
-    border-top: 1px solid rgb(227, 229, 234);
-}
-.consumer__tabpanel-question-button {
-    padding: 16px;
-    display: block;
-    width: 100%;
-    border: none;
-    background: none;
-    cursor: pointer;
-    border-bottom: 1px solid rgb(227, 229, 234);
-    text-align: start;
-    display: flex;
-}
-.consumer__tabpanel-question-button::before {
-    content: "Q.";
-}
-.tabpanel-angle {
-    margin-left: auto;
-
-}
-.consumer__tabpanel-question-content {
-    background-color: rgb(243, 244, 248);
-    padding: 24px;
-    border-bottom: 1px solid rgb(227, 229, 234);
-    display: none;
-    line-height: 1.5;
-    color: rgb(98, 101, 106);
-}
-
-.consumer__tabpanel-question-content p {
-    margin: 0 0 0 0;
-}
-.consumer__tabpanel-question-content ul {
-    padding-left: 0;
-    list-style: none;
-}
-.consumer__tabpanel-question-content ol {
-
-}
-.consumer__tabpanel-question-content ul li::before {
-    content: "-";
-}
-.consumer__tabpanel-question-content button {
-    border: none;
-    font-weight: 700;
-    cursor: pointer;
-    background-color: rgb(5, 92, 245);
-    color: #fff;
-    padding: 8px 16px;
-}
-
-
-
-
-/* ------ 고객센터 페이지 - 고객센터 문의 섹션 ------- */
-
-.inquiry__text {
-    max-width: 830px;
-    margin: 88px auto 0 auto;
-    font-size: 4rem;
-    font-weight: 700;
-}
-
-.inquiry__flex-container {
-    max-width: 830px;
-    margin: 64px auto 40px auto;
-    display: flex;
-    justify-content: space-between;
-}
-.inquiry__content-box {
-    width: 400px;
-}
-.inquiry__content-box p {
-    margin: 0;
-    font-size: 1.7rem;
-    line-height: 1.5;
-}
-.inquiry__content-box button {
-    width: 100%;
-    height: 48px;
-    display: block;
-    border: none;
-    font-size: 1.6rem;
-    font-weight: 700;
-    cursor: pointer;
-}
-.inquiry__chat-button {
-    background-color: rgb(5, 92, 245);
-    color: #fff;
-    margin-top: 48px;
-}
-.inquiry__tel-button {
-    background-color: rgb(243, 244, 248);
-    color: rgb(5, 92, 245);
-    margin-top: 16px;
-}
-
-.inquiry__img {
-    width: 400px;
-    height: 300px;
-    order: -1;
-}

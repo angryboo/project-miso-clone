@@ -1,0 +1,214 @@
+
+/* 공통 영역 (module, header영역, foooter 영역) */
+
+
+/* ----------CSS 모듈화--------------- */
+
+@import url(./normalize.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(./main.css);
+@import url(./consumer.css);
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+    margin: 0;
+    font-size: inherit;
+    line-height: 1;
+}
+
+.a11y-hidden, legend {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0,0,0,0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #2e3035;
+
+    
+}
+/* 모든 em tag를 Block 요소로 쓰기 때문에 직접 지정 */
+em {
+    font-style: normal;
+    display: block;
+}
+/* 자세히보기 버튼 */
+.button-more {
+    border: none;
+    background: transparent;
+    color: rgb(5, 92, 245);
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+}
+
+
+
+
+
+
+
+/* ---------- 공통 - 헤더 영역---------------- */
+
+
+.header {
+    z-index: 10;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    transition-duration: 0.2s;
+}
+.header path {
+    fill: #fff;
+}
+.header-page {
+    color: inherit;
+}
+.scroll-bottom {
+    background-color: #fff;
+    color: inherit;
+    box-shadow: 0 0.2px 3px 0.2px lightgrey;
+    ;
+}
+.scroll-bottom path, .header-page path {
+    fill: #055CF5;
+}
+.header__logo {
+    width: 62px;
+    padding: 0 12px;
+    margin-right: 36px;
+    height: 80px;
+}
+.header__logo svg {
+    margin-top: 29px;
+}
+.header__flex-container {
+    display: flex;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.nav {
+    width: 100%;
+}
+.nav__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    width: 100%;
+}
+.nav__list li:nth-child(4) {
+    margin-left: auto;
+}
+.nav__list-item {
+    padding: 0 14px;
+    line-height: 80px;
+    cursor: pointer;
+}
+.nav__list-item > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav__list-item:nth-child(3) > a {
+    position: relative;
+}
+
+.nav__list-item:nth-child(3):hover::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 90px;
+    height: 2px;
+    background-color: #2e3035;
+    top: 70px;
+}
+
+.nav__sublist {
+    padding: 0 0 20px 0;
+    list-style: none;
+}
+.sublist-hide {
+    display: none;
+}
+.sublist-act {
+    display: block;
+}
+
+.nav__sublist-item {
+    line-height: 40px;
+}
+
+
+
+
+
+/* --------- 공통 - 푸터 영역 -------- */
+
+footer {
+    background-color: rgb(38, 39, 40);
+    color: #fff;
+}
+
+.footer__flex-container {
+    display: flex;
+    max-width: 1055px;
+    margin: 0 auto;
+    padding: 24px;
+    align-items: center;
+}
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 48px;
+    flex-grow: 1;
+    display: flex;
+}
+
+.footer__list-item a {
+    padding: 10px;
+}
+.footer__page-up {
+    color: rgb(5, 92, 245);
+    padding: 10px;
+    font-size: 2rem;
+}
+.footer__address {
+    max-width: 1055px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    color: rgb(163, 167, 174);
+    font-size: 1.3rem;
+    font-style: normal;
+}
+.footer__address span {
+    line-height: 3rem;
+}
+
+.sign {
+    text-align: right;
+    line-height: 5rem;
+    margin-right: 5rem;
+}
